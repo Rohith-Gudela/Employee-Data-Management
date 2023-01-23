@@ -1,0 +1,46 @@
+<style>
+
+    *{
+        margin: 0px;
+        text-align: center;
+    }
+    table,th,td{
+        border: 1px solid black;
+        text-align: center;
+        width: 100vw;
+    }
+    a{
+        font-size: 20px;
+    }
+    a:hover{
+        color: red;
+        background-color: black;
+    }
+</style>
+
+
+
+
+
+<table>
+    <tr>
+        <th>Employee Id</th>
+        <th>Employee Name</th>
+        <th>Info</th>
+        
+    </tr>
+    {% for data in employee %}
+    <tr>
+        <td>{{data.identity_number}}</td>
+        <td>{{data.name}}</td>
+        <td>
+            <a href="more_details/{{data.id}}">More details</a>
+            <a href="update/{{data.id}}">Update</a>
+            <a href="delete/{{data.id}}">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<br><br>
+<a href="/">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://127.0.0.1:8000/register">Add Employee</a>

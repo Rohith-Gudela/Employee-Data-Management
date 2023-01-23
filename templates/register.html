@@ -1,0 +1,40 @@
+<style>
+    *{
+        text-align: center;
+    }
+    h1{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 50px;
+    }
+    form{
+        font-size: 20px;
+    }
+</style>
+
+
+
+
+<h1>Employee Form</h1>
+
+
+<form method=POST action="http://127.0.0.1:8000/registered">
+    {% csrf_token %}
+    Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;
+    <input type="text" name="name" id="" value="{{update.name}}"><br><br>
+    Identity number&nbsp;&nbsp;:&nbsp;&nbsp;
+    <input type="text" name="identity_number" id="" value="{{update.identity_number}}"><br><br>
+    Department&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;
+    <input type="text" name="department" id="" value="{{update.department}}"><br><br>
+    Phone number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;
+    <input type="text" name="phone_number" id="" value="{{update.phone_number}}"><br><br>
+    Address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;
+    <input type="text" name="address" id="" value="{{update.address}}"><br><br><br>
+
+    <div>
+        <input type="submit" value="Save" class="btn btn-secondary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="http://127.0.0.1:8000/details">Employee Details</a>
+    </div>
+
+
+</form>
